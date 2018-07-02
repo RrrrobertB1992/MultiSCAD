@@ -11,7 +11,7 @@ function main() {
           if (target.length) {
 			if($(window).width() >= 1000) {
 				$('html,body').animate({
-					scrollTop: target.offset().top - $('#nav').height() + 1
+					scrollTop: target.offset().top - $('#nav').height() + 2
 				}, 750);
 			} else {
 				$('html,body').animate({
