@@ -11,11 +11,11 @@ function main() {
           if (target.length) {
 			if($(window).width() >= 1000) {
 				$('html,body').animate({
-					scrollTop: target.offset().top - $('#nav').height()
+					scrollTop: target.offset().top - $('#nav').height() + 1
 				}, 750);
 			} else {
 				$('html,body').animate({
-					scrollTop: target.offset().top - $('.navbar-header').height()
+					scrollTop: target.offset().top - $('.navbar-header').height() + 5
 				}, 750);
 				//alert($('.navbar-header').outerHeight(true));
 			}
@@ -26,15 +26,16 @@ function main() {
       });
 
 	// affix the navbar after scroll below header
+	
 $('#nav').affix({
       offset: {
-        top: $('header').height()
+        top: $('header').height() - 2
       }
 });	
 
 $('body').affix({
       offset: {
-        top: $('header').height()
+        top: $('header').height() - 2
       }
 });	
 
