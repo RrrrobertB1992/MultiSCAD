@@ -665,6 +665,10 @@ header .intro-text {
 
 
 @media (max-width: 1000px) {
+	h2 {
+		line-height: 32px;
+	}
+	
     .navbar-header {
         float: none;
     }
