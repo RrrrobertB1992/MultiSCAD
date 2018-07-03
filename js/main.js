@@ -68,7 +68,7 @@ $('body').affix({
   
 // Cache selectors
 var topMenu = $("#nav"),
-    topMenuHeight = topMenu.outerHeight()+5,
+    topMenuHeight = topMenu.outerHeight() + 3,
     // All list items
     menuItems = topMenu.find("a"),
     // Anchors corresponding to menu items
