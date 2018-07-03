@@ -142,10 +142,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b4da8', end
 	color: #526cbb;
 	background-color: transparent;
 }
-.navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
+.navbar-custom .nav li a:focus {
 	outline: 0;
 	background-color: transparent;
-	color: #526cbb;
+	color: #aaa;
 }
 .navbar-custom .nav li.active {
 	outline: 0;
@@ -167,7 +167,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b4da8', end
 	text-transform: uppercase;
 }
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
-	color: #fff;
+	color: #526cbb;
 	background-color: #222;
 	border-color: #222;
 }
