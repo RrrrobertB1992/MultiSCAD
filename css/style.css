@@ -98,6 +98,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b4da8', end
 	top: 0;
 	width: 100%
 }
+
+@media (min-width: 768px) {
+  .container > .navbar-header,
+  .container-fluid > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+	padding-left: 0px;
+	padding-right: 0px;
+  }
+}
+
 .navbar .navbar-nav {
 	display: inline-block;
 	float: none;
@@ -626,9 +639,6 @@ header .intro-text {
 		display: block;
 	}
 	
-}
-
-@media (min-width: 1000px) {
 	#nav .navbar {
 		min-height: 76px !important;
 	}
@@ -638,6 +648,11 @@ header .intro-text {
 	padding: 76px 0px;
 	position: relative;
 }
+}
+
+.navbar-nav > li > a {
+		padding-top: 2px !important; 
+		padding-bottom: 0px !important;
 }
 
 @media (max-width: 1000px) {
@@ -657,10 +672,6 @@ header .intro-text {
 		padding: 0;
 		font-size: 150%;
 	}
-}
-.navbar-nav > li > a {
-		padding-top: 2px !important; 
-		padding-bottom: 0px !important;
 }
 
 
