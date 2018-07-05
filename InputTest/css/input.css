@@ -15,7 +15,7 @@
 }
 
 .inputfile + label {
-    max-width: 80%;
+    max-width: 100%;
     font-size: 1.25rem;
     /* 20px */
     font-weight: 700;
@@ -25,6 +25,7 @@
     display: inline-block;
     overflow: hidden;
     padding: 0.625rem 1.25rem;
+	min-width:602px;
     /* 10px 20px */
 }
 
@@ -56,40 +57,42 @@
 
 /* style 6 */
 
-.inputfile-6 + label {
+.inputfile-svg + label {
     color: #d3394c;
 }
 
-.inputfile-6 + label {
+.inputfile-svg + label {
     border: 1px solid #d3394c;
     background-color: #f1e5e6;
     padding: 0;
 }
 
-.inputfile-6:focus + label,
-.inputfile-6.has-focus + label,
-.inputfile-6 + label:hover {
+.inputfile-svg:focus + label,
+.inputfile-svg.has-focus + label,
+.inputfile-svg + label:hover {
     border-color: #722040;
 }
 
-.inputfile-6 + label span,
-.inputfile-6 + label strong {
+.inputfile-svg + label span,
+.inputfile-svg + label strong {
     padding: 0.625rem 1.25rem;
+	min-width:180px;
+	white-space: nowrap;
+    overflow: hidden;
     /* 10px 20px */
 }
 
-.inputfile-6 + label span {
+.inputfile-svg + label span {
 	float:right;
-    width: 500px;
-    min-height: 2em;
+    width: 300px;
+    min-height: 1em;
     display: inline-block;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    vertical-align: top;
 }
 
-.inputfile-6 + label strong {
+.inputfile-svg + label strong {
 	float:left;
     height: 100%;
     color: #f1e5e6;
@@ -97,14 +100,15 @@
     display: inline-block;
 }
 
-.inputfile-6:focus + label strong,
-.inputfile-6.has-focus + label strong,
-.inputfile-6 + label:hover strong {
+.inputfile-svg:focus + label strong,
+.inputfile-svg.has-focus + label strong,
+.inputfile-svg + label:hover strong {
     background-color: #722040;
 }
 
 @media screen and (max-width: 50em) {
-	.inputfile-6 + label strong {
+	.inputfile-svg + label strong {
 		display: block;
 	}
 }
+

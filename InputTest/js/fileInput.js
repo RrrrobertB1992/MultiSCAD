@@ -1,12 +1,13 @@
-/*
-	By Osvaldas Valutis, www.osvaldas.info
-	Available for use under the MIT License
-*/
-
 'use strict';
+(function(e,t,n){
+	var r=e.querySelectorAll("html")[0];
+	r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")
+})(document,window,0);
 
-;( function( $, window, document, undefined )
+( function( $, window, document, undefined )
 {
+	
+
 	$( '.inputfile' ).each( function()
 	{
 		var $input	 = $( this ),
@@ -17,20 +18,19 @@
 		{
 			var fileName = '';
 
-			if( this.files && this.files.length > 1 )
-				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-			else if( e.target.value )
+			if( e.target.value )
 				fileName = e.target.value.split( '\\' ).pop();
-
 			if( fileName )
 				$label.find( 'span' ).html( fileName );
 			else
 				$label.html( labelVal );
-		});
-
+		})
 		// Firefox bug fix
 		$input
 		.on( 'focus', function(){ $input.addClass( 'has-focus' ); })
 		.on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
 	});
+	
+	
+	
 })( jQuery, window, document );
