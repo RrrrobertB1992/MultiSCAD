@@ -1,9 +1,14 @@
-
-<?php 
-//if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) ob_start("ob_gzhandler"); else ob_start(); 
-?>
 <?php
-echo "";
+ob_start("compress");
+
+    function compress( $minify )
+    {
+		$minify = preg_replace( '/\s*(?!<\")\/\*[^\*]+\*\/(?!\")\s*/' , '' , $minify );
+		$minify = str_replace( array("\rn", "\r", "\t", '  ', '   ', '    '), '', $minify );
+        return $minify;
+    }
+
+	
 readfile('main/header.html');
 	//header.html includes all required header information as well as CSS loading
 readfile('main/logo.html');
@@ -30,4 +35,6 @@ readfile('exports/_export.html');
 	//_badge.html includes everything that controls the badge section
 readfile('main/footer.html');
 	//_badge.html includes everything that controls the badge section
+	
+	ob_end_flush();
 ?>
