@@ -23,7 +23,7 @@ $minify = preg_replace( '/\s*(?!<\")\/\*[^\*]+\*\/(?!\")\s*/' , '' , $minify );
 	header('Content-type: text/css');
     /* css files for combining */
     require('bootstrap.min.css');  //Bootstrap CSS
-    require('style.css'); //Site Custom CSS
+    require('style.min.css'); //Site Custom CSS
 	require('font.min.css'); // Font Awesome CSS (Modified to only include whats needed
 
 	ob_end_flush();
