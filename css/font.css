@@ -2,7 +2,7 @@
     font-family:"MultiScadFont";
     font-style:normal;
     font-weight:900;
-    src:url(../webfonts/MultiScadFont.woff) format("woff")
+    src:url(MultiScadFont.woff) format("woff")
 }
 .msf{
     -moz-osx-font-smoothing:grayscale;
