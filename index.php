@@ -11,9 +11,7 @@ ob_start("compress");
 	
 readfile('main/header.html');
 	//header.html includes all required header information as well as CSS loading and logo
-readfile('main/navbar.html');
-	//navbar.html includes everything that controls the top navigation bar
-	
+
 
 if ($handle = opendir('exports')) {
     while (false !== ($entry = readdir($handle))) {
