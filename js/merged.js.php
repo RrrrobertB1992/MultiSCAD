@@ -7,8 +7,8 @@
 			return $minify;
 		}
 		header('Content-type: script/javascript');
-		readfile('jquery.3.3.1.js');
-		readfile('bootstrap.min.js');
+		readfile('jquery.js');
+		readfile('bootstrap.js');
 		readfile('main.js');
 	ob_end_flush();
 ?>
