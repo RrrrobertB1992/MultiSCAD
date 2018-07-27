@@ -9,7 +9,7 @@ ob_start("compress");
     }
 
 	
-readfile('main/header.html');
+readfile('header.html');
 	//header.html includes all required header information as well as CSS loading and logo
 
 
@@ -23,7 +23,7 @@ if ($handle = opendir('exports')) {
 }
 	
 	
-readfile('main/footer.html');
+readfile('footer.html');
 	//footer.html includes everything that controls the badge section
 	
 	ob_end_flush();
