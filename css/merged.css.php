@@ -1,7 +1,7 @@
 <?php
-	//Used to start a buffer which allows the entire site to be loaded into memory before being processed and sent.
+	//Used to start a buffer which allows all the CSS to be loaded into memory before being processed and sent.
 	ob_start("compress");
-	//Function to remove un-needed information reducing page size and speeding up load times
+	//Function to remove un-needed information reducing CSS size and speeding up load times
 	function compress($minify)
 	{
 		$regex  = array(
@@ -13,19 +13,19 @@
 		);
 		$minify = preg_replace(array_keys($regex), $regex, $minify);
 		$minify = preg_replace('/\s*(?!<\")\/\*[^\*]+\*\/(?!\")\s*/', '', $minify);
-		$minify = str_replace(array("\rn","\r","\n","\t",'  ','    ','    '), '', $minify);
+		$minify = str_replace(array("\rn","\r","\n","\t",'  ','   ','    '), '', $minify);
 		return $minify;
 	}
 	//Used to set the file content type as text/css
 	header('Content-type: text/css');
 	
-	//Used to dynamically load the entire body of the website
+	//Used to dynamically load the entire css of the website
 	if ($handle = opendir('.')) {
 		//Cycles though all files in the directory listed above in opendir
 		while (false !== ($entry = readdir($handle))) {
-			//Ignores "." and ".." directories which are not actual directories
+			//Ignores "." and ".." directories and only loades files ending with .css
 			if ($entry != "." && $entry != ".." && strtolower(substr($entry, strrpos($entry, '.') + 1)) == 'css') {
-				//Actually loads the file and processes it though php
+				//Actually loads the file for combining
 				require("$entry");
 			}
 		}
