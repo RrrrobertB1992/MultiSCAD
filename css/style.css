@@ -90,6 +90,8 @@ hr{
         padding-right:0
     }
 }
+
+
 .navbar .navbar-nav{
     display:inline-block;
     float:none;
@@ -230,11 +232,18 @@ a:focus,.btn:focus,.btn:active:focus,.btn.active:focus,.btn.focus,.btn:active.fo
         padding-bottom:0
     }
 }
-@media (min-width: 1000px){
+@media (min-width: 1011px){
     .page-scroll i{
         font-size:32px;
         display:block
     }
+	.navbar {
+		min-width:965px;
+	}
+	.navbar .container {
+		min-width:965px;
+		padding:0px;
+	}
     #nav .navbar{
         min-height:76px!important
     }
@@ -247,10 +256,11 @@ a:focus,.btn:focus,.btn:active:focus,.btn.active:focus,.btn.focus,.btn:active.fo
     padding-top:2px!important;
     padding-bottom:0!important
 }
-@media (max-width: 1000px){
+@media (max-width: 1010px){
     #nav .navbar{
         min-height:50px!important
     }
+	
     body.affix{
         padding:42px 0;
         position:relative

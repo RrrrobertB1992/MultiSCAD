@@ -40,15 +40,18 @@
 				<ul class="nav navbar-nav">
 					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 					<li class="hidden"> <a href="#page-top"></a> </li>
-					<li> <a class="page-scroll" href="#svgInput"><i class="msf msf-import"></i> SVG Input</a> </li>
-					<li> <a class="page-scroll" href="#badgeSettings"><i class="msf msf-badge"></i> Badge</a> </li>
-					<li> <a class="page-scroll" href="#bookmarkSettings"><i class="msf msf-bookmark"></i> Bookmark</a> </li>
-					<li> <a class="page-scroll" href="#formCutterSettings"><i class="msf msf-cutter"></i> Form Cutter</a> </li>
-					<li> <a class="page-scroll" href="#keychainSettings"><i class="msf msf-key"></i> Keychain</a> </li>
-					<li> <a class="page-scroll" href="#lithophaneSettings"><i class="msf msf-image"></i> Lithophane</a> </li>
-					<li> <a class="page-scroll" href="#stampSettings"><i class="msf msf-stamp"></i> Stamp</a> </li>
-					<li> <a class="page-scroll" href="#stencilSettings"><i class="msf msf-pencil"></i> Stencil</a> </li>
-					<li> <a class="page-scroll" href="#exportSettings"><i class="msf msf-export"></i> Export</a> </li>
+
+<?php
+if ($handle = opendir('exports')) {
+    while (false !== ($entry = readdir($handle))) {
+        if ($entry != "." && $entry != "..") {
+			$temp = str_replace(".html","",explode("_", "$entry")[1]);
+			print("<li> <a class='page-scroll' href='#$temp'><i class='msf msf-$temp'></i> $temp</a> </li>");
+        }
+    }
+    closedir($handle);
+}
+?>
 				</ul>
 			</div>
 		</div>

@@ -34,7 +34,7 @@
 .msf-arrowDown:before{
 	content:"\f005"
 }
-.msf-import:before{
+.msf-svgInput:before{
 	content:"\f006"
 }
 .msf-export:before{
@@ -50,15 +50,19 @@
 .msf-cutter:before{
 	content:"\f012"
 }
-.msf-key:before{
+.msf-keychain:before{
 	content:"\f013"
 }
-.msf-image:before{
+.msf-lithophane:before{
 	content:"\f014"
 }
 .msf-stamp:before{
 	content:"\f015"
 }
-.msf-pencil:before{
+.msf-stencil:before{
 	content:"\f016"
+}
+
+.msf-testing:before{
+	content:"\f012"
 }
