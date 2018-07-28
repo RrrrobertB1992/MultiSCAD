@@ -42,7 +42,7 @@
 					<li class="hidden"> <a href="#page-top"></a> </li>
 
 <?php
-if ($handle = opendir('exports')) {
+if ($handle = opendir('body')) {
     while (false !== ($entry = readdir($handle))) {
         if ($entry != "." && $entry != "..") {
 			$temp = str_replace(".html","",explode("_", "$entry")[1]);

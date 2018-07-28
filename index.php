@@ -11,13 +11,13 @@
 	//used to load header.html file which contains all header information, CSS and navigation
 	require('header.html');
 	//Used to dynamically load the entire body of the website
-	if ($handle = opendir('exports')) {
+	if ($handle = opendir('body')) {
 		//Cycles though all files in the directory listed above in opendir
 		while (false !== ($entry = readdir($handle))) {
 			//Ignores "." and ".." directories which are not actual directories
 			if ($entry != "." && $entry != "..") {
 				//Actually loads the file and processes it though php
-				require("exports/$entry");
+				require("body/$entry");
 			}
 		}
 		closedir($handle);
