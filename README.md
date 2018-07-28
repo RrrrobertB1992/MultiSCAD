@@ -15,11 +15,11 @@ Imported SVG and generated files will be saved in Session Storage and will be lo
 	https://www.w3schools.com/html/html5_webstorage.asp
 
 
-Currently using:
-	JQuery 3.3.1
-	BootStrap 3.3.4
-	Font Awesome 5.1
-	SVGSplit
-	JSZip 3.1.5
+# Extra Codes / Libraries
+JQuery 3.3.1
+BootStrap 3.3.4
+Font-Awesome 5.1 (Reduced down to bare-minimum)
+SVGSplit
+JSZip 3.1.5
 
 The website is Responsive and uses CSS3, HTML5 and JavaScript
