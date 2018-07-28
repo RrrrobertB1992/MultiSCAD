@@ -9,21 +9,21 @@ ob_start("compress");
     }
 
 	
-readfile('header.html');
+require('header.html');
 	//header.html includes all required header information as well as CSS loading and logo
 
 
 if ($handle = opendir('exports')) {
     while (false !== ($entry = readdir($handle))) {
         if ($entry != "." && $entry != "..") {
-            readfile("exports/$entry");
+            require("exports/$entry");
         }
     }
     closedir($handle);
 }
 	
 	
-readfile('footer.html');
+require('footer.html');
 	//footer.html includes everything that controls the badge section
 	
 	ob_end_flush();
