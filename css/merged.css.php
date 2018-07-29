@@ -1,11 +1,11 @@
 <?php
 	//Used to start a buffer which allows all the CSS to be loaded into memory before being processed and sent.
-	ob_start("compress");
+	ob_start("compressCSS");
 	//Function to remove un-needed information reducing CSS size and speeding up load times
-	function compress($minify)
+	function compressCSS($minify)
 	{
 		$regex  = array(
-			"`^([\t\s]+)`ism" => '',
+			"`^([\t\s]+)`ism" => "",
 			"`^\/\*(.+?)\*\/`ism" => "",
 			"`([\n\A;]+)\/\*(.+?)\*\/`ism" => "$1",
 			"`([\n\A;\s]+)//(.+?)[\n\r]`ism" => "$1\n",

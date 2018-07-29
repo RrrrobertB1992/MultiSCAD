@@ -1,8 +1,8 @@
 <?php
 	//Used to start a buffer which allows the entire site to be loaded into memory before being processed and sent.
-	ob_start("compress");
+	ob_start("compressIndex");
 	//Function to remove un-needed information reducing page size and speeding up load times
-	function compress($minify)
+	function compressIndex($minify)
 	{
 		$minify = preg_replace('/\s*(?!<\")\/\*[^\*]+\*\/(?!\")\s*/', '', $minify);
 		$minify = str_replace(array("\rn","\r","\t",'  ','   ','    '), '', $minify);
