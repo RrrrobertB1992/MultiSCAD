@@ -12,8 +12,8 @@ function main() {
 			var target = $(this.hash).length ? $(this.hash) : $('[name=' + this.hash.slice(1) + ']');
 			$("li").removeClass("active");
 			$(this).parent().addClass("active");
-			$(".bodySection").addClass("hidden");
-			$(target).removeClass("hidden");
+			$(".bodySection.active").toggleClass('active hidden')
+			$(target).toggleClass('active hidden')
 		});
 		// affix the navbar after scroll below header
 		$('#nav').affix({
@@ -32,3 +32,10 @@ function main() {
 	}());
 }
 main();
+
+$(function() {
+	var activeSection=$(".bodySection,.active").attr('id');
+	var href='a[href$="'+activeSection+'"]';
+	$(href).parent().addClass("active");
+	//$(".bodySection,.active").attr('id')
+});
