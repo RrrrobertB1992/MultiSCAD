@@ -18,7 +18,7 @@ Imported SVG and generated files will be saved in Session Storage and will be lo
 # Extra Codes / Libraries<br>
 ~JQuery 3.3.1<br>
 ~BootStrap 3.3.4<br>
-~Font-Awesome 5.1 (Reduced down to bare-minimum)<br>
+~<strike>Font-Awesome 5.1</strike> - Now using a custom made font.<br>
 ~SVGSplit<br>
 ~JSZip 3.1.5<br>
 <br>
