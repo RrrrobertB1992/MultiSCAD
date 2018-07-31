@@ -10,13 +10,29 @@ h1{
     font-weight:700
 }
 h2{
-    line-height:20px;
-    margin:0;
-    color:#444;
-    font-weight:400;
-    margin-bottom:30px;
-    font-size:34px;
-    text-transform:uppercase
+	line-height:20px;
+	margin:0;
+	color:#444;
+	font-weight:400;
+	margin-bottom:30px;
+	font-size:30px;
+	text-transform:uppercase;
+	position: relative;
+	padding-bottom: 11px;
+	text-decoration: none;
+}
+
+h2::after {
+	content: "";
+	position: absolute;
+	bottom: 2px;
+	left: 32.5%;
+	height: 4px;
+	width: 35%;
+	background: #1B167C;
+	background: linear-gradient(left, #4977C2 0%,#1B167C 50%,#4977C2 100%);
+	background: -moz-linear-gradient(left, #4977C2 0%,#1B167C 50%,#4977C2 100%);
+	background: -webkit-linear-gradient(left, #4977C2 0%,#1B167C 50%,#4977C2 100%);
 }
 p{
     font-size:15px
@@ -60,6 +76,7 @@ ul,ol{
     moz-padding:0
 }
 hr{
+	display:none;
     height:4px;
     width:40%;
     text-align:center;
