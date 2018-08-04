@@ -43,16 +43,20 @@
 
 <?php
 if ($handle = opendir('body')) {
+	$tabIndex=0;
     while (false !== ($entry = readdir($handle))) {
         if ($entry != "." && $entry != "..") {
 			$disabledCheck = fgets(fopen("body\\".$entry, 'r'));
 			if (strpos($disabledCheck, 'DISABLED') === false) {
 				$disabled = 'enabled';
+				$tabID="tabID='$tabIndex'";
+				$tabIndex++;
 			} else {
 				$disabled = 'disabled';
+				$tabID="";
 			}
 			$pageID = str_replace(".html","",explode("_", "$entry")[1]);
-			print("<li> <a class='page-scroll $disabled' value='$pageID'><i class='msf msf-$pageID'></i> $pageID</a> </li>");
+			print("<li> <a class='page-scroll $disabled' value='$pageID' $tabID><i class='msf msf-$pageID'></i> $pageID</a> </li>");
         }
     }
     closedir($handle);
