@@ -45,8 +45,14 @@
 if ($handle = opendir('body')) {
     while (false !== ($entry = readdir($handle))) {
         if ($entry != "." && $entry != "..") {
+			$disabledCheck = fgets(fopen("body\\".$entry, 'r'));
+			if (strpos($disabledCheck, 'DISABLED') === false) {
+				$disabled = 'enabled';
+			} else {
+				$disabled = 'disabled';
+			}
 			$pageID = str_replace(".html","",explode("_", "$entry")[1]);
-			print("<li> <a class='page-scroll' value='$pageID'><i class='msf msf-$pageID'></i> $pageID</a> </li>");
+			print("<li> <a class='page-scroll $disabled' value='$pageID'><i class='msf msf-$pageID'></i> $pageID</a> </li>");
         }
     }
     closedir($handle);

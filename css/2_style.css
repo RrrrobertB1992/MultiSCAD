@@ -157,6 +157,13 @@ hr{
     color:#526cbb;
     background-color:transparent
 }
+
+.navbar-custom .nav li a.disabled:hover{
+    outline:0;
+    color:#636363;
+    background-color:transparent
+}
+
 .navbar-custom .nav li a:focus{
     outline:0;
     background-color:transparent;

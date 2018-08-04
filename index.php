@@ -16,8 +16,13 @@
 		while (false !== ($entry = readdir($handle))) {
 			//Ignores "." and ".." directories which are not actual directories
 			if ($entry != "." && $entry != "..") {
-				//Actually loads the file and processes it though php
-				require("body/$entry");
+				//Used to load the first line of the page, which is where the disable line should be.
+				$disabledCheck = fgets(fopen("body\\".$entry, 'r'));
+				/*Used to check the first line of the page to see if it is disabled.  Use <?php //DISABLED ?>" to disable a page*/
+				if (strpos($disabledCheck, 'DISABLED') === false) {
+					//Loads the page if it is not disabled
+					require("body/$entry");
+				}
 			}
 		}
 		closedir($handle);

@@ -9,6 +9,9 @@ function main() {
 		'use strict';
 		$('a.page-scroll').click(function(event) {
 			event.preventDefault();
+			if($(this).hasClass("disabled")) {
+				return false;
+			}
 			var target = $('[id=' + $(this).attr("value") + ']');
 			$("li").removeClass("active");
 			$(this).parent().addClass("active");
