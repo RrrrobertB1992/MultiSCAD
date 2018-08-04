@@ -9,7 +9,7 @@ function main() {
 		'use strict';
 		$('a.page-scroll').click(function(event) {
 			event.preventDefault();
-			var target = $(this.hash).length ? $(this.hash) : $('[name=' + this.hash.slice(1) + ']');
+			var target = $('[id=' + $(this).attr("value") + ']');
 			$("li").removeClass("active");
 			$(this).parent().addClass("active");
 			$(".bodySection.active").toggleClass('active hidden')

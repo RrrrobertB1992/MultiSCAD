@@ -45,8 +45,8 @@
 if ($handle = opendir('body')) {
     while (false !== ($entry = readdir($handle))) {
         if ($entry != "." && $entry != "..") {
-			$temp = str_replace(".html","",explode("_", "$entry")[1]);
-			print("<li> <a class='page-scroll' href='#$temp'><i class='msf msf-$temp'></i> $temp</a> </li>");
+			$pageID = str_replace(".html","",explode("_", "$entry")[1]);
+			print("<li> <a class='page-scroll' value='$pageID'><i class='msf msf-$pageID'></i> $pageID</a> </li>");
         }
     }
     closedir($handle);
