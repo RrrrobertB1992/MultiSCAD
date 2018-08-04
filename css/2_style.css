@@ -26,13 +26,17 @@ h2::after {
 	content: "";
 	position: absolute;
 	bottom: 2px;
-	left: 32.5%;
-	height: 4px;
-	width: 35%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	height: 4px;\
+	min-width:250px;
+	max-width:450px;
 	background: #1B167C;
-	background: linear-gradient(left, #4977C2 0%,#1B167C 50%,#4977C2 100%);
-	background: -moz-linear-gradient(left, #4977C2 0%,#1B167C 50%,#4977C2 100%);
-	background: -webkit-linear-gradient(left, #4977C2 0%,#1B167C 50%,#4977C2 100%);
+	background: linear-gradient(left, transparent 0%, #4977C2 25%,#1B167C 50%,#4977C2 75%, transparent 100%);
+	background: -moz-linear-gradient(left, transparent 0%, #4977C2 25%,#1B167C 50%,#4977C2 75%, transparent 100%);
+	background: -webkit-linear-gradient(left, transparent 0%, #4977C2 25%,#1B167C 50%,#4977C2 75%, transparent 100%);
 }
 p{
     font-size:15px
