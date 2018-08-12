@@ -5,7 +5,7 @@ if(in_array(substr($_SERVER['HTTP_HOST'],0,strrpos($_SERVER['HTTP_HOST'], ".")),
 } else {
 	header('HTTP/1.0 403 Forbidden');
 	http_response_code(403);
-	die("Forbidden <br> <br>You don't have permission to access PHP Info on this server.");
+	include("errDocs/403.html");
 }
 //phpinfo();
 ?>
