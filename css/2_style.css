@@ -261,7 +261,7 @@ a:focus,.btn:focus,.btn:active:focus,.btn.active:focus,.btn.focus,.btn:active.fo
         padding-bottom:0
     }
 }
-@media (min-width: 1011px){
+@media (min-width: 951px){
     .page-scroll i{
         font-size:32px;
         display:block
@@ -285,7 +285,7 @@ a:focus,.btn:focus,.btn:active:focus,.btn.active:focus,.btn.focus,.btn:active.fo
     padding-top:2px!important;
     padding-bottom:0!important
 }
-@media (max-width: 1010px){
+@media (max-width: 950px){
     #nav .navbar{
         min-height:50px!important
     }
