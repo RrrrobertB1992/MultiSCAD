@@ -40,6 +40,9 @@
 .msf-export:before{
 	content:"\f007"
 }
+.msf-designs:before{
+	content:"\f008"
+}
 
 .msf-badge:before{
 	content:"\f010"
