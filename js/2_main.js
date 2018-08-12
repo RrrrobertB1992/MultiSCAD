@@ -38,7 +38,6 @@ main();
 
 $(function() {
 	var activeSection=$(".bodySection,.active").attr('id');
-	var href='a[href$="'+activeSection+'"]';
-	$(href).parent().addClass("active");
-	//$(".bodySection,.active").attr('id')
+	var target = $('[value=' + activeSection + ']');
+	$(target).parent().addClass("active");
 });
