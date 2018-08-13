@@ -9,7 +9,7 @@ if(in_array(substr($_SERVER['REMOTE_ADDR'],0,strrpos($_SERVER['REMOTE_ADDR'], ".
 } else {
 	header('HTTP/1.0 403 Forbidden');
 	http_response_code(403);
-	include("errDocs/403.html");
+	include("errDocs/403.php");
 }
 //phpinfo();
 ?>
