@@ -4,7 +4,6 @@
 <div class="overlay"></div>
 <div class="terminal">
   <h1>Error <span class="errorcode">403</span></h1>
-  <p class="output">You don't have permission to access <?php print $_SERVER['PHP_SELF']; ?> on this server.</p>
-  <p class="output"><a href="../index.php">Click Here</a> to go home.</p>
-  <p class="output">If the issue persists and you followed a link on this site<br>Please contact: <a href="mailto:rrrrobertb1992@gmail.com">Robert</a> for further assistance.</p>
+  <p class="output">We are sorry, but you do not have access to <b><?php print str_replace("/","",$_SERVER['PHP_SELF']); ?></b>.</p>
+  <p class="output">Either check the URL, <a href="../index.php">go home</a>, or feel free to <a href="mailto:rrrrobertb1992@gmail.com">Report this issue</a>.</p>
 </div>
