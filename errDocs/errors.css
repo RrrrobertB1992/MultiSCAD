@@ -20,6 +20,20 @@ body {
   text-shadow:
       0 0 1ex rgba(51, 255, 51, 1),
       0 0 2px rgba(255, 255, 255, 0.8);
+	  overflow: hidden;
+	  margin:0px;
+}
+
+b {
+	
+}
+
+b::before {
+	content:'"';	
+}
+
+b::after {
+	content:'"';
 }
 
 .overlay {
@@ -57,11 +71,12 @@ body {
       transparent 100%);
   background-repeat: no-repeat;
   animation: scan 7.5s linear 1s infinite;
+  opacity: 0;
 }
 
 @keyframes scan {
-  0%        { background-position: 0 -100vh; }
-  35%, 100% { background-position: 0 100vh; }
+  0% {opacity: 100;background-position: 0 -100vh; }
+  35%, 100% {opacity: 100;background-position: 0 100vh; }
 }
 
 .terminal {
