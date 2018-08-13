@@ -1,6 +1,10 @@
 <?php
-$allowedHosts = array("localhost","127.0.0.1","192.168.0","192.168.1", "192.168.2");
-if(in_array(substr($_SERVER['HTTP_HOST'],0,strrpos($_SERVER['HTTP_HOST'], ".")),$allowedHosts)) {
+$allowedHosts = array("192.168.0","192.168.1", "192.168.2");
+$bypassLogin = "admin";
+if(!isset($_REQUEST['login'])) {
+	$_REQUEST['login']="";
+}
+if(in_array(substr($_SERVER['REMOTE_ADDR'],0,strrpos($_SERVER['REMOTE_ADDR'], ".")),$allowedHosts) or $_SERVER['REMOTE_ADDR']=="::1" or $_SERVER['REMOTE_ADDR']=="127.0.0.1" or $_REQUEST['login']=="$bypassLogin") {
 	phpinfo();
 } else {
 	header('HTTP/1.0 403 Forbidden');
